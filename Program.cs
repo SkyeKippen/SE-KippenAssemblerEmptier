@@ -23,7 +23,7 @@ namespace IngameScript
     public partial class Program : MyGridProgram
     {
         // Version (Used for display)
-        string version = "v0.1.0";
+        string version = "v0.1.1";
         string overflowTag = "[Overflow]";
 
         static int waitSeconds = 300;
@@ -94,7 +94,7 @@ namespace IngameScript
         public void Main(string argument, UpdateType updateSource)
         {
             Echo($"Kippen Assembler Emptier (KAE) {version}...");
-            Echo($"Waiting {(waitTicks / 60) * 100} more seconds...");
+            Echo($"Waiting {waitTicks * 100 / 60} more seconds...\n");
 
             if (waitTicks > 0)
             {
